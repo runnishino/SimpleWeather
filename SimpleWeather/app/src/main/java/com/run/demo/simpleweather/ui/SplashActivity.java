@@ -8,8 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.run.demo.simpleweather.MainActivity;
@@ -22,8 +21,6 @@ import com.run.demo.simpleweather.R;
 public class SplashActivity extends AppCompatActivity {
 
     private TextView tv_splash;
-    private AnimationSet animationSet;
-    private int animationDelay = 2000;
 
     private Handler handler = new Handler(){
         @Override
@@ -52,22 +49,11 @@ public class SplashActivity extends AppCompatActivity {
 
         tv_splash = findViewById(R.id.tv_splash);
 
-        //共用一个动画补间
-        animationSet = new AnimationSet(true);
-        animationSet.setDuration(animationDelay);
 
-        //动画播放结束之后固定位置
-        animationSet.setFillAfter(true);
 
-        //缩放
-        ScaleAnimation scaleAnimation = new ScaleAnimation(0,1,0,1);
-        scaleAnimation.setDuration(animationDelay);
-        animationSet.addAnimation(scaleAnimation);
 
-        //平移
-        TranslateAnimation translateAnimation = new TranslateAnimation(0,0,0,-200);
-        translateAnimation.setDuration(animationDelay);
-        animationSet.addAnimation(translateAnimation);
+
+        AnimationSet animationSet = (AnimationSet) AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splash_anim_set);
 
         //执行动画
         tv_splash.startAnimation(animationSet);
@@ -95,6 +81,6 @@ public class SplashActivity extends AppCompatActivity {
     //取消返回键监听
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        super.onBackPressed();
     }
 }
