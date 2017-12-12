@@ -21,6 +21,7 @@
 
             <!--刷新按钮-->
             <LinearLayout
+                android:id="@+id/layout_Refresh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -28,12 +29,14 @@
                 android:paddingLeft="10dp">
 
                 <ImageView
+                    android:id="@+id/imageView_Refresh"
                     android:paddingLeft="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/icon_refresh" />
 
                 <TextView
+                    android:id="@+id/textView_Refresh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"
@@ -52,16 +55,18 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView_City"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="上海"
+                    android:text=""
                     android:textColor="@color/color_white"
                     android:textSize="@dimen/font_large_size" />
 
                 <TextView
+                    android:id="@+id/textView_UpdateTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00:00"
+                    android:text=""
                     android:textColor="@color/color_white" />
 
             </LinearLayout>
@@ -74,11 +79,12 @@
                 android:gravity="right">
 
                 <TextView
+                    android:id="@+id/textView_LunarDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:paddingRight="10dp"
-                    android:text="农历九月十八/周三"
+                    android:text=""
                     android:textColor="@color/color_white"
                     android:textSize="@dimen/font_standard_size" />
 
@@ -95,26 +101,29 @@
             android:layout_height="200dp">
 
             <ImageView
+                android:id="@+id/imageView_WeatherIcon"
                 android:paddingTop="10dp"
                 android:src="@mipmap/sun"
                 android:layout_width="100dp"
                 android:layout_height="100dp" />
 
             <TextView
+                android:id="@+id/textView_Temperature"
                 android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="@dimen/font_jumbo_size"
                 android:textColor="@color/color_white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="18°"/>
+                android:text=""/>
 
             <TextView
+                android:id="@+id/textView_WeatherDescription"
                 android:textSize="@dimen/font_medium_size"
                 android:textColor="@color/color_white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="多云"/>
+                android:text=""/>
 
         </LinearLayout>
 
@@ -124,6 +133,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/textView_WindDirection"
                 android:layout_marginBottom="15dp"
                 android:textSize="@dimen/font_standard_size"
                 android:textColor="@color/color_white"
@@ -131,9 +141,10 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="风向|东南风"/>
+                android:text=""/>
 
             <TextView
+                android:id="@+id/textView_WindStrength"
                 android:layout_marginBottom="15dp"
                 android:textSize="@dimen/font_standard_size"
                 android:textColor="@color/color_white"
@@ -141,7 +152,7 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="风力|3级"/>
+                android:text=""/>
 
 
         </LinearLayout>
